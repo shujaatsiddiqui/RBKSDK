@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ExternalDlls\RBA\RBA_SDK.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="RBA_SDK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+    <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>ExternalDlls\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>ExternalDlls\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>ExternalDlls\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.AcroPDFLib">
+      <HintPath>ExternalDlls\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="FitnessIntl.API.ClientAPI">
+      <HintPath>ExternalDlls\FitnessIntl.API.ClientAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="FitnessIntl.API.Common.Model">
+      <HintPath>ExternalDlls\FitnessIntl.API.Common.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="FitnessIntl.API.Localization">
+      <HintPath>ExternalDlls\FitnessIntl.API.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="FitnessIntl.API.PaymentDevice">
+      <HintPath>ExternalDlls\FitnessIntl.API.PaymentDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="FitnessIntl.API.SignatureDevice">
+      <HintPath>ExternalDlls\FitnessIntl.API.SignatureDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="FitnessIntl.API.Utility">
+      <HintPath>ExternalDlls\FitnessIntl.API.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="RBA_SDK_CS">
+      <HintPath>RBA_SDK_CS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
